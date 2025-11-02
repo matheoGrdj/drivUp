@@ -1,5 +1,5 @@
 [build]
-  base = "drivUp/drivUp"
+  base = "drivUp"
   command = "npm ci && npm run generate"
   publish = ".output/public"
 
