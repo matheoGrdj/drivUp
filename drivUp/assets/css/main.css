@@ -4,6 +4,7 @@
   --color-metallic-purple: #6B2EFF;
   --color-metallic-purple-light: #A779FF;
   --color-metallic-purple-dark: #3A1C71;
+  --accent-green: #10B981;
 }
 
 /* --- Effet verre métallique --- */
@@ -11,23 +12,6 @@
   @apply bg-white/70 backdrop-blur-xl shadow-[0_0_25px_rgba(107,46,255,0.15)]
   border border-white/40 rounded-2xl p-8 text-center transition
   hover:shadow-[0_0_35px_rgba(107,46,255,0.35)] hover:-translate-y-1;
-}
-
-/* --- Effet “holo line” sur titres --- */
-.section-title {
-  @apply relative inline-block pb-2;
-}
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 70%;
-  height: 3px;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, transparent, #A779FF, transparent);
-  box-shadow: 0 0 10px #A779FF;
-  border-radius: 4px;
 }
 
 /* --- Témoignages style “bulle de verre” --- */
