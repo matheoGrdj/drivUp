@@ -43,200 +43,136 @@
 
         <!-- ====== Section Pourquoi choisir Driv’Up ====== -->
         <section class="bg-white py-24 px-6 text-gray-800">
-            <div class="max-w-6xl mx-auto text-center mb-12">
+            <div class="max-w-6xl mx-auto text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4 text-metallic-purple section-title">
                     Pourquoi choisir Driv’Up ?
                 </h2>
                 <p class="text-gray-600">Une approche humaine et connectée de l’apprentissage.</p>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <!-- Card 1 -->
-                <div
-                    class="relative flex flex-col items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border hover:shadow-md transition transform hover:-translate-y-1">
-                    <div class="flex items-center gap-4 w-full">
-                        <div
-                            class="flex-none rounded-xl p-3 bg-gradient-to-br from-[#6B2EFF] to-[#10B981] text-white shadow-md">
-                            <Icon name="mdi:account-check-outline" class="w-7 h-7" />
-                        </div>
-                        <h3 class="text-lg font-semibold text-slate-900">Suivi personnalisé</h3>
-                    </div>
-                    <p class="text-gray-600">Un accompagnement pensé pour toi, selon ton rythme.</p>
-                    <div class="mt-auto flex items-center gap-3">
-                        <span
-                            class="inline-flex items-center gap-2 text-xs font-semibold px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-100">
-                            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" aria-hidden>
-                                <path d="M5 13l4 4L19 7" stroke="#059669" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            Garantie qualité
-                        </span>
-                    </div>
+            <div class="grid md:grid-cols-4 gap-10 max-w-6xl mx-auto">
+                <div class="card">
+                    <Icon name="mdi:account-check-outline" class="text-metallic-purple text-6xl mb-4 hover-glow" />
+                    <h3 class="font-semibold text-xl mb-2 text-metallic-purple">Suivi personnalisé</h3>
+                    <p>Un accompagnement pensé pour toi, selon ton rythme.</p>
                 </div>
 
-                <!-- Card 2 -->
-                <div
-                    class="relative flex flex-col items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border hover:shadow-md transition transform hover:-translate-y-1">
-                    <div class="flex items-center gap-4 w-full">
-                        <div
-                            class="flex-none rounded-xl p-3 bg-gradient-to-br from-[#6B2EFF] to-[#10B981] text-white shadow-md">
-                            <Icon name="mdi:cash-multiple" class="w-7 h-7" />
-                        </div>
-                        <h3 class="text-lg font-semibold text-slate-900">Tarifs transparents</h3>
-                    </div>
-                    <p class="text-gray-600">Des formules claires, adaptées et sans surprise.</p>
-                    <div class="mt-auto flex items-center gap-3">
-                        <span class="text-sm font-medium text-emerald-700">Paiement en 3x disponible</span>
-                    </div>
+                <div class="card">
+                    <Icon name="mdi:cash-multiple" class="text-metallic-purple text-6xl mb-4 hover-glow" />
+                    <h3 class="font-semibold text-xl mb-2 text-metallic-purple">Tarifs transparents</h3>
+                    <p>Des formules simples, sans surprise.</p>
                 </div>
 
-                <!-- Card 3 -->
-                <div
-                    class="relative flex flex-col items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border hover:shadow-md transition transform hover:-translate-y-1">
-                    <div class="flex items-center gap-4 w-full">
-                        <div
-                            class="flex-none rounded-xl p-3 bg-gradient-to-br from-[#6B2EFF] to-[#10B981] text-white shadow-md">
-                            <Icon name="mdi:steering" class="w-7 h-7" />
-                        </div>
-                        <h3 class="text-lg font-semibold text-slate-900">Moniteurs dévoués</h3>
-                    </div>
-                    <p class="text-gray-600">Équipe expérimentée et pédagogue, suivis réguliers.</p>
-                    <div class="mt-auto flex items-center gap-3">
-                        <span
-                            class="inline-flex items-center gap-2 text-xs font-semibold px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-100">
-                            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" aria-hidden>
-                                <circle cx="12" cy="12" r="10" stroke="#059669" stroke-width="1.5" />
-                            </svg>
-                            Coaching pro
-                        </span>
-                    </div>
+                <div class="card">
+                    <Icon name="mdi:steering" class="text-metallic-purple text-6xl mb-4 hover-glow" />
+                    <h3 class="font-semibold text-xl mb-2 text-metallic-purple">Moniteurs dévoués</h3>
+                    <p>Une équipe passionnée par la réussite de ses élèves.</p>
                 </div>
 
-                <!-- Card 4 -->
-                <div
-                    class="relative flex flex-col items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border hover:shadow-md transition transform hover:-translate-y-1">
-                    <div class="flex items-center gap-4 w-full">
-                        <div
-                            class="flex-none rounded-xl p-3 bg-gradient-to-br from-[#6B2EFF] to-[#10B981] text-white shadow-md">
-                            <Icon name="mdi:calendar-clock" class="w-7 h-7" />
-                        </div>
-                        <h3 class="text-lg font-semibold text-slate-900">Planning flexible</h3>
-                    </div>
-                    <p class="text-gray-600">Réserve tes leçons simplement via l’appli ou le site.</p>
-                    <div class="mt-auto flex items-center gap-3">
-                        <span class="text-sm font-medium text-emerald-700">Réservation 24/7</span>
-                    </div>
+                <div class="card">
+                    <Icon name="mdi:calendar-clock" class="text-metallic-purple text-6xl mb-4 hover-glow" />
+                    <h3 class="font-semibold text-xl mb-2 text-metallic-purple">Planning flexible</h3>
+                    <p>Des horaires adaptés à ton emploi du temps.</p>
                 </div>
             </div>
         </section>
 
 
         <!-- ====== Nos formations ====== -->
-        <section class="bg-white pb-10 px-6">
-            <div class="max-w-6xl mx-auto text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4 text-metallic-purple section-title">Témoignages de nos élèves</h2>
+        <section class="bg-gray-50 py-24 px-6 text-gray-800">
+            <div class="max-w-6xl mx-auto text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-metallic-purple section-title">
+                    Nos formations
+                </h2>
+                <p class="text-gray-600">Des parcours adaptés à ton niveau.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <blockquote class="testimonial bg-white rounded-2xl p-6 shadow-sm border">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div
-                            class="w-16 h-16 rounded-full flex items-center justify-center bg-emerald-50 text-emerald-700 font-bold text-xl ring-1 ring-emerald-100">
-                            L
-                        </div>
-                        <div>
-                            <p class="text-gray-800 italic">"J’ai eu mon permis du premier coup !"</p>
-                            <span class="block mt-2 font-semibold text-metallic-purple-dark">– Léa</span>
-                        </div>
-                    </div>
-                </blockquote>
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="form-card">
+                    <h3 class="text-2xl font-semibold text-metallic-purple mb-3">Code de la route</h3>
+                    <p>Prépare ton code avec nos outils interactifs.</p>
+                </div>
 
-                <blockquote class="testimonial bg-white rounded-2xl p-6 shadow-sm border">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div
-                            class="w-16 h-16 rounded-full flex items-center justify-center bg-emerald-50 text-emerald-700 font-bold text-xl ring-1 ring-emerald-100">
-                            T
-                        </div>
-                        <div>
-                            <p class="text-gray-800 italic">"Des moniteurs attentifs et motivants."</p>
-                            <span class="block mt-2 font-semibold text-metallic-purple-dark">– Thomas</span>
-                        </div>
-                    </div>
-                </blockquote>
+                <div class="form-card">
+                    <h3 class="text-2xl font-semibold text-metallic-purple mb-3">Permis B</h3>
+                    <p>Des leçons pratiques pour progresser rapidement.</p>
+                </div>
+            </div>
+        </section>
 
-                <blockquote class="testimonial bg-white rounded-2xl p-6 shadow-sm border">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div
-                            class="w-16 h-16 rounded-full flex items-center justify-center bg-emerald-50 text-emerald-700 font-bold text-xl ring-1 ring-emerald-100">
-                            I
-                        </div>
-                        <div>
-                            <p class="text-gray-800 italic">"Une formation agréable et efficace."</p>
-                            <span class="block mt-2 font-semibold text-metallic-purple-dark">– Inès</span>
-                        </div>
-                    </div>
-                </blockquote>
+
+        <!-- ====== Témoignages ====== -->
+        <section class="bg-white py-24 px-6">
+            <div class="max-w-6xl mx-auto text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-metallic-purple section-title">
+                    Témoignages de nos élèves
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                <div class="testimonial">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 bg-metallic-purple text-white flex items-center justify-center font-bold text-xl">
+                        L</div>
+                    <p class="italic text-gray-700">"J’ai eu mon permis du premier coup !"</p>
+                    <span class="block mt-3 font-semibold text-metallic-purple-dark">– Léa</span>
+                </div>
+
+                <div class="testimonial">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 bg-metallic-purple text-white flex items-center justify-center font-bold text-xl">
+                        T</div>
+                    <p class="italic text-gray-700">"Des moniteurs attentifs et motivants."</p>
+                    <span class="block mt-3 font-semibold text-metallic-purple-dark">– Thomas</span>
+                </div>
+
+                <div class="testimonial">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 bg-metallic-purple text-white flex items-center justify-center font-bold text-xl">
+                        I</div>
+                    <p class="italic text-gray-700">"Une formation agréable et efficace."</p>
+                    <span class="block mt-3 font-semibold text-metallic-purple-dark">– Inès</span>
+                </div>
             </div>
         </section>
 
 
         <!-- ====== Nos chiffres / garanties ====== -->
         <section class="bg-gray-50 py-24 px-6 text-center">
-            <h2 class="text-4xl font-bold mb-10 text-metallic-purple section-title">Nos chiffres parlent d’eux-mêmes
+            <h2 class="text-4xl font-bold mb-12 text-metallic-purple section-title">
+                Nos chiffres parlent d’eux-mêmes
             </h2>
 
-            <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-                <div class="p-6 rounded-2xl bg-white shadow-sm border">
-                    <div class="text-6xl font-extrabold text-metallic-purple">92<span
-                            class="text-2xl align-baseline font-medium text-gray-500">%</span></div>
-                    <p class="text-gray-600 mt-3">Taux de réussite</p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-sm text-emerald-700 font-semibold">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        Certifié & suivi
-                    </div>
+            <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <div>
+                    <h3 class="text-6xl font-bold text-black drop-shadow-sm">92%</h3>
+                    <p class="text-gray-600 mt-2">Taux de réussite</p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-white shadow-sm border">
-                    <div class="text-6xl font-extrabold text-metallic-purple">+1500</div>
-                    <p class="text-gray-600 mt-3">Élèves formés</p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-sm text-emerald-700 font-semibold">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
-                        </svg>
-                        Communauté active
-                    </div>
+                <div>
+                    <h3 class="text-6xl font-bold text-black drop-shadow-sm">+1500</h3>
+                    <p class="text-gray-600 mt-2">Élèves formés</p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-white shadow-sm border">
-                    <div class="text-6xl font-extrabold text-metallic-purple">4.9/5</div>
-                    <p class="text-gray-600 mt-3">Note moyenne</p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-sm text-emerald-700 font-semibold">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 17.3L8.2 19l.7-4.2L6 13l4.3-.7L12 8l1.7 4.3L18 13l-3 1.8.7 4.2z"
-                                stroke="currentColor" stroke-width="0.6" />
-                        </svg>
-                        Avis vérifiés
-                    </div>
+                <div>
+                    <h3 class="text-6xl font-bold text-black drop-shadow-sm">4.9/5</h3>
+                    <p class="text-gray-600 mt-2">Note moyenne</p>
                 </div>
             </div>
         </section>
 
+
         <!-- ====== Tarifs & financement ====== -->
         <section class="bg-white py-24 text-center px-6">
-            <h2 class="text-4xl font-bold mb-6 text-metallic-purple section-title">Tarifs & Financement</h2>
-            <p class="text-gray-700 mb-8">Découvrez nos facilités de paiement et offres étudiantes.</p>
+            <h2 class="text-4xl font-bold mb-6 text-metallic-purple section-title">
+                Tarifs & Financement
+            </h2>
+            <p class="text-gray-700 mb-10">Découvrez nos facilités de paiement.</p>
 
-            <div class="flex items-center justify-center gap-4">
-                <NuxtLink to="/tarifs"
-                    class="inline-block px-6 py-3 rounded-full font-semibold bg-gradient-to-r from-[#6B2EFF] to-[#10B981] text-white shadow-lg hover:opacity-95 transition">
-                    Voir la fiche complète</NuxtLink>
-                <NuxtLink to="/financement"
-                    class="inline-block px-5 py-3 rounded-full font-semibold border border-emerald-200 text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition">
-                    Financement</NuxtLink>
-            </div>
+            <NuxtLink to="/tarifs" class="bg-metallic-purple text-white px-10 py-4 rounded-full shadow-lg
+           hover:bg-metallic-purple-dark transition hover:shadow-[0_0_20px_#A779FF]">
+                Voir la fiche complète
+            </NuxtLink>
         </section>
     </div>
 </template>
@@ -417,23 +353,5 @@
             transparent 100%);
     background-size: 200% 100%;
     animation: lightflow 5s infinite linear;
-}
-
-.section-title {
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -12px;
-    width: 120px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #A779FF, #10B981, transparent);
-    border-radius: 8px;
-    opacity: 0.95;
 }
 </style>
