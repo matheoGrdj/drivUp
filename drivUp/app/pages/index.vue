@@ -8,17 +8,6 @@
             <div aria-hidden="true" class="absolute -top-36 left-1/2 -translate-x-1/2 w-[540px] h-[540px]
        rounded-full blur-[120px] pointer-events-none violet-halo"></div>
 
-            <!-- PETITE ETIQUETTE -->
-            <div class="absolute top-10 left-6 md:left-12 z-30">
-                <span
-                    class="inline-flex items-center gap-2 bg-white/95 text-sm text-gray-800 px-3 py-1 rounded-full shadow-sm font-semibold">
-                    <svg width="12" height="12" viewBox="0 0 24 24" class="opacity-90">
-                        <circle cx="12" cy="12" r="10" fill="#6B2EFF" />
-                    </svg>
-                    Nouveau
-                </span>
-            </div>
-
             <!-- VOITURE (optionnelle) -->
             <div class="absolute bottom-10 w-44 md:w-56 lg:w-72 animate-drive z-20">
                 <img src="/images/car.png" alt="Voiture Driv'Up" class="drop-shadow-2xl opacity-100" />

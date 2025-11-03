@@ -94,42 +94,41 @@ const headerClasses = computed(() => {
       </button>
     </div>
 
-    <!-- MOBILE MENU OVERLAY -->
-    <transition name="fade">
-      <div v-if="mobileMenuOpen" id="mobile-menu" class="fixed inset-0 z-40 flex flex-col items-center justify-start pt-28 px-6
-               bg-white/95 backdrop-blur-md" role="dialog" aria-modal="true">
-        <button @click="mobileMenuOpen = false"
-          class="absolute top-6 right-6 w-10 h-10 rounded-md
-                 bg-white/90 flex items-center justify-center border border-purple-100/30 focus:ring-2 focus:ring-[#A779FF]/30">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M6 6L18 18" stroke="#4A1CA0" stroke-width="2" stroke-linecap="round"></path>
-            <path d="M6 18L18 6" stroke="#4A1CA0" stroke-width="2" stroke-linecap="round"></path>
-          </svg>
-        </button>
-
-        <ul class="w-full max-w-md text-center space-y-6">
-          <li v-for="link in links" :key="link.href">
-            <a :href="link.href" @click="mobileMenuOpen = false" :class="['block px-6 py-3 rounded-xl text-lg font-semibold transition',
-              isActive(link.href) ? 'bg-[#F4EFFF] text-[#4A1CA0]' : 'text-gray-800']">
-              {{ link.label }}
-            </a>
-          </li>
-        </ul>
-
-        <div class="mt-8">
-          <a href="/inscription" class="inline-block px-6 py-3 rounded-full font-semibold
-                                       bg-gradient-to-r from-[#6B2EFF] to-[#A779FF] text-white shadow-lg">
-            Je m'inscris
-          </a>
-        </div>
-      </div>
-    </transition>
-
     <!-- subtle bottom light -->
     <div
       class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#A779FF] to-transparent opacity-80 pointer-events-none">
     </div>
   </header>
+  <!-- MOBILE MENU OVERLAY -->
+  <transition name="fade">
+    <div v-if="mobileMenuOpen" id="mobile-menu" class="fixed inset-0 z-50 flex flex-col items-center justify-start pt-28 px-6
+               bg-white/80 backdrop-blur-md" role="dialog" aria-modal="true">
+      <button @click="mobileMenuOpen = false"
+        class="absolute top-6 right-6 w-10 h-10 rounded-md
+                 bg-white/70 flex items-center justify-center border border-purple-100/30 focus:ring-2 focus:ring-[#A779FF]/30">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6L18 18" stroke="#4A1CA0" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M6 18L18 6" stroke="#4A1CA0" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+
+      <ul class="w-full max-w-md text-center space-y-6">
+        <li v-for="link in links" :key="link.href">
+          <a :href="link.href" @click="mobileMenuOpen = false" :class="['block px-6 py-3 rounded-xl text-lg font-semibold transition',
+            isActive(link.href) ? 'bg-[#F4EFFF] text-[#4A1CA0]' : 'text-gray-800']">
+            {{ link.label }}
+          </a>
+        </li>
+      </ul>
+
+      <div class="mt-8">
+        <a href="/inscription" class="inline-block px-6 py-3 rounded-full font-semibold
+            bg-gradient-to-r from-[#6B2EFF] to-[#A779FF] text-white shadow-lg">
+          Je m'inscris
+        </a>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <style scoped>
