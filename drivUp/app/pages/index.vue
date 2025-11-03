@@ -105,19 +105,19 @@
 
             <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
                 <div class="testimonial">
-                    <img src="" class="w-20 h-20 rounded-full mx-auto mb-4" />
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 bg-metallic-purple text-white flex items-center justify-center font-bold text-xl">L</div>
                     <p class="italic text-gray-700">"J’ai eu mon permis du premier coup !"</p>
                     <span class="block mt-3 font-semibold text-metallic-purple-dark">– Léa</span>
                 </div>
 
                 <div class="testimonial">
-                    <img src="" class="w-20 h-20 rounded-full mx-auto mb-4" />
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 bg-metallic-purple text-white flex items-center justify-center font-bold text-xl">T</div>
                     <p class="italic text-gray-700">"Des moniteurs attentifs et motivants."</p>
                     <span class="block mt-3 font-semibold text-metallic-purple-dark">– Thomas</span>
                 </div>
 
                 <div class="testimonial">
-                    <img src="" class="w-20 h-20 rounded-full mx-auto mb-4" />
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 bg-metallic-purple text-white flex items-center justify-center font-bold text-xl">I</div>
                     <p class="italic text-gray-700">"Une formation agréable et efficace."</p>
                     <span class="block mt-3 font-semibold text-metallic-purple-dark">– Inès</span>
                 </div>
@@ -190,31 +190,47 @@
 
 
 /* ==== Animation voiture améliorée ==== */
+
 @keyframes drive {
-    0% {
-        transform: translateX(-250px) scaleX(1) rotateZ(0deg);
-    }
+  0% {
+    transform: translateX(-120%) scaleX(1);
+  }
 
-    45% {
-        transform: translateX(105vw) scaleX(1) rotateZ(1deg);
-    }
+  45% {
+    transform: translateX(120vw) scaleX(1);
+  }
 
-    50% {
-        transform: translateX(105vw) scaleX(-1) rotateZ(0deg);
-        /* inversion */
-    }
+  50% {
+    transform: translateX(120vw) scaleX(-1); /* demi-tour */
+  }
 
-    95% {
-        transform: translateX(-250px) scaleX(-1) rotateZ(-1deg);
-    }
+  95% {
+    transform: translateX(-120%) scaleX(-1);
+  }
 
-    100% {
-        transform: translateX(-250px) scaleX(1);
-    }
+  100% {
+    transform: translateX(-120%) scaleX(1);
+  }
 }
 
 .animate-drive {
-    animation: drive 14s ease-in-out infinite;
+  animation: drive 12s ease-in-out infinite;
+}
+
+@media (min-width: 1024px) {
+  .animate-drive {
+    animation-duration: 15s;
+  }
+}
+
+.animate-drive img {
+  animation: floatcar 2.2s ease-in-out infinite;
+}
+
+@keyframes floatcar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes lightflow {
