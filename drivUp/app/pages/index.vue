@@ -162,7 +162,6 @@
                 Voir la fiche complète
             </NuxtLink>
         </section>
-
     </div>
 </template>
 
