@@ -1,7 +1,7 @@
 <template>
     <div class="relative overflow-hidden bg-violet-lum">
         <!-- ====== Bannière / Introduction ====== -->
-        <section class="relative py-28 px-6 text-center bg-gradient-to-b from-white to-fuchsia-50/80">
+        <section class="relative py-28 px-6 text-center bg-violet-lum">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
                     Nos Formations Permis & Code
@@ -16,7 +16,7 @@
             </div>
         </section>
         <!-- ====== Liste des formations ====== -->
-        <section class="py-24 px-6 bg-gradient-to-b from-white to-green-main/25">
+        <section class="py-24 px-6 bg-gradient-to-b from-white to-green-100/80">
             <div class="max-w-6xl mx-auto text-center mb-16">
                 <h2 class="text-4xl font-bold text-green-main mb-4">Nos Formations</h2>
                 <p class="">Découvrez nos différentes formules selon votre profil et vos objectifs.</p>

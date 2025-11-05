@@ -58,7 +58,7 @@
             </div>
         </section>
         <!-- ====== Nos formations ====== -->
-        <section class="bg-gradient-to-b from-green-main/10 to-green-main/25 py-24 px-6 text-gray-800">
+        <section class="bg-gradient-to-b from-green-main/10 to-green-main/20 py-24 px-6 text-gray-800">
             <div class="max-w-6xl mx-auto text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4 text-metallic-purple section-title">
                     Nos formations
