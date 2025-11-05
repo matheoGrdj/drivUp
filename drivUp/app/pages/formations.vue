@@ -26,7 +26,6 @@
                 <div v-for="formation in formations" :key="formation.title"
                     class="bg-white/80 backdrop-blur-sm border border-white/40 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out">
                     <img :src="formation.img" :alt="formation.title"
-                        :srcset="`${formation.img} 1x, ${formation.img.replace(/\.\w+$/, '@2x.$&')} 2x`"
                         class="rounded-xl mb-4 w-full object-cover h-48 group-hover:scale-105 transition-transform duration-300" />
                     <h3 class="text-2xl text-center font-semibold text-gray-900 mb-3">{{ formation.title }}</h3>
                     <ul class="text-gray-600 text-sm mb-4 text-left list-disc list-inside space-y-1">
