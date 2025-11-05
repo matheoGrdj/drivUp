@@ -16,7 +16,7 @@
             </div>
         </section>
         <!-- ====== Liste des formations ====== -->
-        <section class="py-24 px-6 bg-gradient-to-b from-white to-green-main/15">
+        <section class="bg-gradient-to-b from-white to-green-light/40 py-24 px-6">
             <div class="max-w-6xl mx-auto text-center mb-16">
                 <h2 class="text-4xl font-bold text-green-main mb-4">Nos Formations</h2>
                 <p class="">Découvrez nos différentes formules selon votre profil et vos objectifs.</p>
