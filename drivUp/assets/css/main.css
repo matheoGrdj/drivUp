@@ -185,7 +185,7 @@
 /* small screens */
 @media (max-width:640px) {
     .vl-title {
-        font-size: 1.6rem;
+        font-size: 3.5rem;
     }
 
     .vl-cta-primary {
