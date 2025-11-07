@@ -22,6 +22,14 @@ export async function handler(event) {
       throw new Error("Champs manquants : login ou password");
     }
 
+    if (typeof login !== "string") {
+      throw new Error("Champ login invalide");
+    }
+
+    if (typeof password !== "string" || password.length < 6) {
+      throw new Error("Champ password invalide");
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
     const uuid = uuidv4();
 
