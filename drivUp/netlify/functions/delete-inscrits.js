@@ -12,7 +12,7 @@ export async function handler(event) {
   const sql = neon(process.env.DATABASE_URL || "");
 
   try {
-    // const decoded = verifyToken(event);
+    const decoded = verifyToken(event);
 
     let id = event.queryStringParameters?.id;
     if (!id && event.body) {
