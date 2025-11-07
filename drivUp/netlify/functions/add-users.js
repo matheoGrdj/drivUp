@@ -1,11 +1,20 @@
 import { neon } from "@neondatabase/serverless";
 import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcrypt";
+import verifyToken from "./utils";
 
 export async function handler(event) {
+  if (!["POST"].includes(event.httpMethod)) {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: "Méthode non autorisée" }),
+    };
+  }
   const sql = neon(process.env.DATABASE_URL || "");
 
   try {
+    const decoded = verifyToken(event);
+
     const body = JSON.parse(event.body);
     const { login, password } = body;
 
