@@ -1,6 +1,6 @@
 import { neon } from "@neondatabase/serverless";
 import { v4 as uuidv4 } from "uuid";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 
 export async function handler(event) {
   const sql = neon(process.env.DATABASE_URL || "");
