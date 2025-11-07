@@ -1,84 +1,119 @@
 <template>
-    <div class="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white">
-        <!-- ====== Bannière / Introduction ====== -->
-        <section class="relative py-28 px-6 text-center">
+    <div class="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-purple-50">
+
+        <section class="relative py-20 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+
             <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
-                    Inscription
-                </h1>
-                <p class="text-lg leading-relaxed text-gray-700 max-w-2xl mx-auto">
-                    <span class="vl-brand font-bold">Driv’Up</span> est votre auto-école moderne et
-                    sérieuse à Cronenbourg, qui accompagne chaque élève vers la réussite.
-                </p>
-            </div>
-        </section>
-
-        <!-- ====== Formulaire d'inscription ====== -->
-        <section class="py-20 px-6">
-            <div class="max-w-3xl mx-auto">
                 <div
-                    class="bg-white shadow-xl border border-gray-200 rounded-2xl p-10 transition hover:shadow-2xl duration-300">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
-                        Formulaire d'inscription
-                    </h2>
+                    class="bg-white/80 backdrop-blur-sm shadow-2xl border border-gray-100 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 transition-all hover:shadow-3xl duration-300">
 
-                    <form @submit.prevent="handleSubmit" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="nom" class="block text-sm font-medium text-gray-700">Nom</label>
+                    <!-- En-tête -->
+                    <div class="text-center mb-8 sm:mb-10">
+                        <div class="inline-block p-3 bg-purple-100 rounded-2xl mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                            Formulaire d'inscription
+                        </h2>
+                        <p class="text-sm sm:text-base text-gray-600">
+                            Remplissez les informations ci-dessous pour créer votre compte
+                        </p>
+                    </div>
+
+                    <form @submit.prevent="handleSubmit" class="space-y-5 sm:space-y-6">
+                        <!-- Ligne 1: Nom et Prénom -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <div class="space-y-2">
+                                <label for="nom" class="block text-sm font-semibold text-gray-700">
+                                    Nom <span class="text-red-500">*</span>
+                                </label>
                                 <input type="text" id="nom" v-model="form.nom" required
-                                    class="mt-1 block w-full px-4 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
+                                    class="block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-base"
+                                    placeholder="Dupont" />
                             </div>
-                            <div>
-                                <label for="prenom" class="block text-sm font-medium text-gray-700">Prénom</label>
+                            <div class="space-y-2">
+                                <label for="prenom" class="block text-sm font-semibold text-gray-700">
+                                    Prénom <span class="text-red-500">*</span>
+                                </label>
                                 <input type="text" id="prenom" v-model="form.prenom" required
-                                    class="mt-1 block w-full px-4 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
+                                    class="block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-base"
+                                    placeholder="Jean" />
                             </div>
                         </div>
 
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="mail" class="block text-sm font-medium text-gray-700">Email</label>
+                        <!-- Ligne 2: Email et Téléphone -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <div class="space-y-2">
+                                <label for="mail" class="block text-sm font-semibold text-gray-700">
+                                    Email <span class="text-red-500">*</span>
+                                </label>
                                 <input type="email" id="mail" v-model="form.mail" required
-                                    class="mt-1 block w-full px-4 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
+                                    class="block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-base"
+                                    placeholder="jean.dupont@email.com" />
                             </div>
-                            <div>
-                                <label for="telephone" class="block text-sm font-medium text-gray-700">Téléphone
-                                    (0XXXXXXXXX)</label>
-                                <input type="tel" id="telephone" v-model="form.telephone" required
-                                    class="mt-1 block w-full px-4 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
+                            <div class="space-y-2">
+                                <label for="telephone" class="block text-sm font-semibold text-gray-700">
+                                    Téléphone <span class="text-red-500">*</span>
+                                </label>
+                                <input type="tel" id="telephone" v-model="form.telephone" required pattern="0[0-9]{9}"
+                                    class="block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-base"
+                                    placeholder="0612345678" />
                             </div>
                         </div>
 
-                        <div class="text-center">
-                            <a href="/connexion" class="text-purple-700 font-medium hover:text-purple-900 underline">
-                                Connectez-vous ici.
-                            </a>
+                        <!-- Lien de connexion -->
+                        <div class="text-center py-2">
+                            <NuxtLink to="/connexion"
+                                class="text-purple-600 font-semibold hover:text-purple-800 underline decoration-2 underline-offset-2 transition-colors">
+                                Connectez-vous ici
+                            </NuxtLink>
                         </div>
 
-                        <div class="">
+                        <!-- Bouton de soumission -->
+                        <div class="pt-2">
                             <button type="submit"
-                                class="w-full bg-purple-600 text-white rounded-lg py-3 font-semibold hover:bg-purple-700 active:scale-[0.98] transition-all shadow-md">
-                                S'inscrire
+                                class="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl py-3.5 sm:py-4 cursor-pointer text-base sm:text-lg font-semibold hover:from-purple-700 hover:to-purple-800 active:scale-[0.98] transition-all shadow-lg hover:shadow-xl">
+                                S'inscrire maintenant
                             </button>
                         </div>
                     </form>
 
-                    <transition name="fade">
+                    <!-- Messages de succès/erreur -->
+                    <Transition name="fade">
                         <div v-if="successMessage"
-                            class="mt-6 p-4 bg-green-100 text-green-700 border border-green-200 rounded-lg text-center">
-                            ✅ {{ successMessage }} <br />
-                            Nous vous recontacterons bientôt pour finaliser votre inscription !
+                            class="mt-6 p-4 sm:p-5 bg-green-50 text-green-800 border-2 border-green-200 rounded-xl text-center">
+                            <div class="flex items-center justify-center gap-2 mb-2">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="font-semibold text-base sm:text-lg">{{ successMessage }}</span>
+                            </div>
+                            <p class="text-sm sm:text-base">
+                                Nous vous recontacterons bientôt pour finaliser votre inscription !
+                            </p>
                         </div>
-                    </transition>
+                    </Transition>
 
-                    <transition name="fade">
+                    <Transition name="fade">
                         <div v-if="errorMessage"
-                            class="mt-6 p-4 bg-red-100 text-red-700 border border-red-200 rounded-lg text-center">
-                            ⚠️ {{ errorMessage }} <br />
-                            Il se peut que le format de l'email ou du téléphone soit incorrect.
+                            class="mt-6 p-4 sm:p-5 bg-red-50 text-red-800 border-2 border-red-200 rounded-xl text-center">
+                            <div class="flex items-center justify-center gap-2 mb-2">
+                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="font-semibold text-base sm:text-lg">{{ errorMessage }}</span>
+                            </div>
+                            <p class="text-sm sm:text-base">
+                                Il se peut que le format de l'email ou du téléphone soit incorrect.
+                            </p>
                         </div>
-                    </transition>
+                    </Transition>
                 </div>
             </div>
         </section>
@@ -116,10 +151,18 @@ const handleSubmit = async () => {
         successMessage.value = 'Inscription réussie !'
         errorMessage.value = ''
         form.value = { nom: '', prenom: '', mail: '', telephone: '' }
+
+        setTimeout(() => {
+            successMessage.value = ''
+        }, 5000)
     } catch (error) {
         errorMessage.value = "Erreur lors de l'inscription. Veuillez réessayer."
         successMessage.value = ''
         console.error('Erreur:', error)
+
+        setTimeout(() => {
+            errorMessage.value = ''
+        }, 5000)
     }
 }
 </script>
@@ -133,5 +176,9 @@ const handleSubmit = async () => {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
 }
 </style>
