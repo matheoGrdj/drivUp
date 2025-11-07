@@ -8,4 +8,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  runtimeConfig: {
+    DATABASE_URL: process.env.DATABASE_URL,
+  },
 });

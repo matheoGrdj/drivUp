@@ -26,10 +26,10 @@
                 <!-- Colonne 3 : Contact -->
                 <div>
                     <h3 class="text-lg font-semibold text-metallic-purple mb-4">Contact</h3>
-                    <p class="text-gray-600">123 Rue de Cronenbourg</p>
-                    <p class="text-gray-600">67000 Strasbourg</p>
-                    <p class="text-gray-600">Email: <span class="font-semibold">contact@drivup.fr</span></p>
-                    <p class="text-gray-600">Téléphone: <span class="font-semibold">01 23 45 67 89</span></p>
+                    <p class="text-gray-600">104 rue de Hochfelden</p>
+                    <p class="text-gray-600">67200 Strasbourg</p>
+                    <p class="text-gray-600">Email: <span class="font-semibold">contact@drivup-ae.com</span></p>
+                    <p class="text-gray-600">Téléphone: <span class="font-semibold">07 56 86 49 91</span></p>
                     <div class="mt-4">
                         <NuxtLink to="/contact"
                             class="bg-metallic-purple/70 hover:bg-metallic-purple-dark/80 text-white font-bold py-2 px-4 rounded-full">
