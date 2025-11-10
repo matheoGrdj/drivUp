@@ -82,7 +82,38 @@ const form = ref({
 
 const errorMessage = ref('')
 
+const stripTags = (s) => (s ?? '').replace(/<[^>]*>?/g, '')
+const removeCtrls = (s) => (s ?? '').replace(/[\u0000-\u001F\u007F]/g, '')
+const sanitizeLogin = (s) =>
+    removeCtrls(stripTags(String(s)))
+        .normalize('NFKC')
+        .replace(/[^A-Za-z0-9._-]/g, '')
+        .slice(0, 64)
+
+const sanitizePassword = (s) =>
+    removeCtrls(String(s))
+        .normalize('NFKC')
+        .trim()
+        .slice(0, 128)
+
+const isValidLogin = (s) => /^[A-Za-z0-9._-]{3,64}$/.test(s)
+const isValidPassword = (s) => typeof s === 'string' && s.length >= 6 && s.length <= 128
+
+
 const handleSubmit = async () => {
+    const login = sanitizeLogin(form.value.login)
+    const password = sanitizePassword(form.value.password)
+
+    // validate after sanitization
+    if (!isValidLogin(login)) {
+        errorMessage.value = "Login invalide (3-64 caractères: lettres, chiffres, . _ -)."
+        return
+    }
+    if (!isValidPassword(password)) {
+        errorMessage.value = "Mot de passe invalide (min 6 caractères)."
+        return
+    }
+
     try {
         const response = await fetch('/.netlify/functions/login', {
             method: 'POST',

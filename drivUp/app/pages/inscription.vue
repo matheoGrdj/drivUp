@@ -133,7 +133,69 @@ const form = ref({
 const successMessage = ref('')
 const errorMessage = ref('')
 
+const stripTags = (s) => (s || '').replace(/<[^>]*>?/gm, '')
+const removeCtrl = (s) => (s || '').replace(/[\u0000-\u001F\u007F]/g, '')
+const collapseSpaces = (s) => (s || '').replace(/\s+/g, ' ').trim()
+
+const sanitizeName = (s) =>
+    collapseSpaces(
+        stripTags(
+            removeCtrl(String(s))
+        )
+    )
+        .replace(/[^A-Za-zÀ-ÖØ-öø-ÿ' -]/g, '')
+        .slice(0, 100)
+
+const sanitizeEmail = (s) =>
+    collapseSpaces(
+        stripTags(
+            removeCtrl(String(s))
+        )
+    )
+        .toLowerCase()
+        .slice(0, 254)
+
+const sanitizeTelephone = (s) =>
+    stripTags(removeCtrl(String(s)))
+        .replace(/[\s+.()-]/g, '')
+        .replace(/[^0-9]/g, '')
+        .slice(0, 15)
+
+const isValidName = (v) => /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,100}$/.test(v || '')
+const isValidEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v || '')
+const isValidTelephone = (v) => /^[0-9]{10,15}$/.test(v || '')
+
 const handleSubmit = async () => {
+    errorMessage.value = ''
+    successMessage.value = ''
+
+    // Sanitarisation
+    const nom = sanitizeName(form.value.nom)
+    const prenom = sanitizeName(form.value.prenom)
+    const mail = sanitizeEmail(form.value.mail)
+    const telephone = sanitizeTelephone(form.value.telephone)
+
+    // Validation
+    if (!nom || !prenom || !mail || !telephone) {
+        errorMessage.value = "Champs requis manquants."
+        return
+    }
+    if (!isValidName(nom) || !isValidName(prenom)) {
+        errorMessage.value = "Nom / prénom invalides."
+        return
+    }
+    if (!isValidEmail(mail)) {
+        errorMessage.value = "Email invalide."
+        return
+    }
+    if (!isValidTelephone(telephone)) {
+        errorMessage.value = "Téléphone invalide."
+        return
+    }
+
+    // Réinjecter valeurs nettoyées
+    form.value = { nom, prenom, mail, telephone }
+
     try {
         const response = await fetch('/.netlify/functions/add-inscrits', {
             method: 'POST',
