@@ -101,7 +101,7 @@ const handleSubmit = async () => {
         localStorage.setItem('authToken', data.token)
         errorMessage.value = ''
         form.value = { login: '', password: '' }
-        // window.location.href = '/dashboard';
+        window.location.href = '/dashboard';
     } catch (error) {
         errorMessage.value = "Erreur lors de la connexion. Veuillez réessayer."
         console.error('Erreur:', error)

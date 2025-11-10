@@ -5,29 +5,45 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const mobileMenuOpen = ref(false)
 const scrolled = ref(false)
+const isLoggedIn = ref(false)
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll)
+  checkAuth()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+})
+
+const checkAuth = () => {
+  const token = localStorage.getItem('authToken')
+  isLoggedIn.value = !!token
+}
+
+const logout = () => {
+  localStorage.removeItem('authToken')
+  isLoggedIn.value = false
+  window.location.href = '/' // ou utilise un router push si tu veux
+}
+
+const onScroll = () => { scrolled.value = window.scrollY > 18 }
 
 const links = [
   { href: '/', label: 'Accueil' },
   { href: '/formations', label: 'Formations' },
-  { href: '/tarifs', label: 'Tarifs' },
   { href: '/temoignages', label: 'Témoignages' },
+  { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact' }
 ]
 
 const isActive = (href) => route.path === href
 
-// compact header on scroll
-const onScroll = () => { scrolled.value = window.scrollY > 18 }
-onMounted(() => window.addEventListener('scroll', onScroll))
-onUnmounted(() => window.removeEventListener('scroll', onScroll))
-
-// class binding for header depending on scroll + page (home = more transparent)
 const headerClasses = computed(() => {
   return [
     'fixed top-0 left-0 w-full z-50 transition-all duration-250',
     'backdrop-blur-xl',
     scrolled.value ? 'py-2 shadow-[0_8px_30px_rgba(107,46,255,0.06)]' : 'py-4 shadow-none',
-    // slightly more transparent on top of the home hero
     route.path === '/' ? 'bg-white/60 border-b border-purple-100/40' : 'bg-white/95 border-b border-purple-200/40'
   ].join(' ')
 })
@@ -67,14 +83,29 @@ const headerClasses = computed(() => {
         </ul>
       </nav>
 
-      <!-- CTA Desktop (optional, visible md+) -->
       <div class="hidden md:flex items-center gap-4">
-        <a href="/inscription" class="inline-flex items-center px-4 py-2 rounded-full font-semibold
-                                     bg-gradient-to-r from-[#6B2EFF] to-[#A779FF] text-white shadow-lg
-                                     hover:translate-y-[-2px] transition-transform">
-          Je m'inscris
-        </a>
+        <template v-if="isLoggedIn">
+          <a href="/dashboard" class="inline-flex items-center px-4 py-2 rounded-full font-semibold
+                               bg-gradient-to-r from-[#6B2EFF] to-[#A779FF] text-white shadow-lg
+                               hover:translate-y-[-2px] transition-transform">
+            Tableau de bord
+          </a>
+
+          <button @click="logout" class="inline-flex items-center px-4 py-2 rounded-full font-semibold
+                                 bg-gray-200 text-gray-700 hover:bg-gray-300 transition-transform cursor-pointer">
+            Déconnexion
+          </button>
+        </template>
+
+        <template v-else>
+          <a href="/inscription" class="inline-flex items-center px-4 py-2 rounded-full font-semibold
+                                 bg-gradient-to-r from-[#6B2EFF] to-[#A779FF] text-white shadow-lg
+                                 hover:translate-y-[-2px] transition-transform">
+            Je m'inscris
+          </a>
+        </template>
       </div>
+
 
       <!-- MOBILE HAMBURGER -->
       <button @click="mobileMenuOpen = !mobileMenuOpen" :aria-expanded="mobileMenuOpen" aria-controls="mobile-menu"
@@ -122,11 +153,25 @@ const headerClasses = computed(() => {
       </ul>
 
       <div class="mt-8">
-        <a href="/inscription" class="inline-block px-6 py-3 rounded-full font-semibold
-            bg-gradient-to-r from-[#6B2EFF] to-[#A779FF] text-white shadow-lg">
-          Je m'inscris
-        </a>
+        <template v-if="isLoggedIn">
+          <a href="/dashboard" @click="mobileMenuOpen = false" class="block px-6 py-3 rounded-full font-semibold
+          bg-gradient-to-r from-[#6B2EFF] to-[#A779FF] text-white shadow-lg text-center mb-4">
+            Dashboard
+          </a>
+          <button @click="logout" class="block w-full px-6 py-3 rounded-full font-semibold
+          bg-gray-200 text-gray-800 hover:bg-gray-300 text-center">
+            Déconnexion
+          </button>
+        </template>
+
+        <template v-else>
+          <a href="/inscription" @click="mobileMenuOpen = false" class="block px-6 py-3 rounded-full font-semibold
+          bg-gradient-to-r from-[#6B2EFF] to-[#A779FF] text-white shadow-lg text-center">
+            Je m'inscris
+          </a>
+        </template>
       </div>
+
     </div>
   </transition>
 </template>
