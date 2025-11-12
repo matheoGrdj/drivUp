@@ -35,6 +35,13 @@
                     </NuxtLink>
                 </div>
             </div>
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30 animate-bounce cursor-pointer"
+                @click="scrollToSection">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-black/80 hover:text-white transition-colors"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
         </section>
 
         <!-- ====== POURQUOI CHOISIR DRIV'UP ====== -->
@@ -121,7 +128,7 @@
                         <h3 class="text-2xl font-bold text-metallic-purple mb-3">Code de la route</h3>
                         <p class="text-gray-600 mb-6">Préparez votre examen théorique avec nos outils interactifs et nos
                             moniteurs expérimentés.</p>
-                        <NuxtLink to="/formations"
+                        <NuxtLink to="/formations#formations-list"
                             class="text-purple-600 font-semibold hover:text-purple-800 transition-colors inline-flex items-center justify-center gap-2">
                             <span>En savoir plus</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
@@ -139,7 +146,7 @@
                         <h3 class="text-2xl font-bold text-metallic-purple mb-3">Permis B & AAC</h3>
                         <p class="text-gray-600 mb-6">Maîtrisez la conduite avec nos heures pratiques et notre suivi
                             personnalisé intensif.</p>
-                        <NuxtLink to="/formations"
+                        <NuxtLink to="/formations#formations-list"
                             class="text-purple-600 font-semibold hover:text-purple-800 transition-colors inline-flex items-center justify-center gap-2">
                             <span>En savoir plus</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
@@ -307,4 +314,29 @@ useHead({
         },
     ],
 })
+
+const scrollToSection = () => {
+    const nextSection = document.querySelector("section.bg-white"); // cible la 1ʳᵉ section blanche
+    if (nextSection) {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+};
 </script>
+
+<style scoped>
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 1.5s infinite;
+}
+</style>

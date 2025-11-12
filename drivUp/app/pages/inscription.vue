@@ -19,8 +19,10 @@
                             Formulaire d'inscription
                         </h2>
                         <p class="text-sm sm:text-base text-gray-600">
-                            Remplissez les informations ci-dessous pour créer votre compte
+                            Remplissez les informations ci-dessous,
                         </p>
+                        <p class="text-sm sm:text-base text-gray-600">nous vous recontacterons rapidement pour finaliser
+                            votre inscription !</p>
                     </div>
 
                     <form @submit.prevent="handleSubmit" class="space-y-5 sm:space-y-6">
