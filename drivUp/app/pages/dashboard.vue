@@ -55,6 +55,20 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+useHead({
+    title: "Tableau de Bord",
+    meta: [
+        {
+            name: "description",
+            content: "Votre tableau de bord personnel pour suivre vos inscrits et gérer votre formation chez Driv'Up.",
+        },
+        {
+            name: "robots",
+            content: "noindex, nofollow",
+        },
+    ],
+})
+
 const inscrits = ref([])
 const loading = ref(true)
 const authToken = ref(null)

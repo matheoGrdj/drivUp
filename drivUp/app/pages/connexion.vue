@@ -75,6 +75,28 @@
 <script setup>
 import { ref } from 'vue'
 
+useHead({
+    title: "Connexion",
+    meta: [
+        {
+            name: "description",
+            content: "Connectez-vous à votre compte Driv'Up pour accéder à votre tableau de bord et suivre votre progression.",
+        },
+        {
+            name: "keywords",
+            content: "connexion, login, compte, tableau de bord, suivi formation",
+        },
+        {
+            property: "og:title",
+            content: "Connexion | Driv'Up",
+        },
+        {
+            property: "og:description",
+            content: "Accédez à votre compte Driv'Up pour suivre votre formation.",
+        },
+    ],
+})
+
 const form = ref({
     login: '',
     password: ''

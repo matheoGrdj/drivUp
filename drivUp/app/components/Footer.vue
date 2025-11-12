@@ -53,12 +53,12 @@
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-600 hover:text-[#6B2EFF] transition-colors">
                             <span class="sr-only">Facebook</span>
-                            <img src="/icons/facebook.svg" alt="Facebook"
+                            <img src="/icons/facebook.svg" alt="icône Facebook"
                                 class="h-6 w-6 scale-125 hover:scale-135 transition-transform" />
                         </a>
                         <a href="#" class="text-gray-600 hover:text-[#6B2EFF] transition-colors">
                             <span class="sr-only">Instagram</span>
-                            <img src="/icons/instagram.svg" alt="Instagram"
+                            <img src="/icons/instagram.svg" alt="icône Instagram"
                                 class="h-6 w-6 hover:scale-110 transition-transform" />
                         </a>
                     </div>

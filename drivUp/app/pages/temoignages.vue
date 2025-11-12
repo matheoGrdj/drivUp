@@ -94,3 +94,29 @@
         </section>
     </div>
 </template>
+
+<script setup>
+
+useHead({
+    title: "Témoignages",
+    meta: [
+        {
+            name: "description",
+            content: "Découvrez les avis et témoignages de nos élèves qui ont réussi leur permis avec Driv'Up. Taux de satisfaction élevé.",
+        },
+        {
+            name: "keywords",
+            content: "témoignages, avis clients, réussite permis, avis auto-école, satisfaction élèves",
+        },
+        {
+            property: "og:title",
+            content: "Témoignages de nos Élèves | Driv'Up",
+        },
+        {
+            property: "og:description",
+            content: "Lisez les succès de nos élèves et découvrez pourquoi ils font confiance à Driv'Up.",
+        },
+    ],
+})
+
+</script>

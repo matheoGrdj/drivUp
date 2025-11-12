@@ -286,5 +286,25 @@
 </template>
 
 <script setup>
-// Pour les icônes SVG intégrées - aucune dépendance externe requise
+useHead({
+    title: "Accueil",
+    meta: [
+        {
+            name: "description",
+            content: "Driv'Up - Votre auto-école moderne à Strasbourg. Cours clairs, moniteurs expérimentés et outils modernes pour réussir votre permis.",
+        },
+        {
+            name: "keywords",
+            content: "auto-école Strasbourg, permis de conduire, formation conduite, moniteur expérimenté",
+        },
+        {
+            property: "og:title",
+            content: "Driv'Up - Auto-école à Strasbourg | Accueil",
+        },
+        {
+            property: "og:description",
+            content: "Découvrez Driv'Up, votre auto-école moderne avec 92% de taux de réussite.",
+        },
+    ],
+})
 </script>

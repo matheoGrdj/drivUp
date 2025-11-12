@@ -72,6 +72,28 @@
 <script setup>
 import { ref } from 'vue'
 
+useHead({
+    title: "FAQ",
+    meta: [
+        {
+            name: "description",
+            content: "Trouvez les réponses à vos questions sur Driv'Up : inscription, forfaits, paiement, horaires et suivi de formation.",
+        },
+        {
+            name: "keywords",
+            content: "FAQ, questions réponses, inscription permis, tarifs, horaires formation",
+        },
+        {
+            property: "og:title",
+            content: "Foire Aux Questions | Driv'Up",
+        },
+        {
+            property: "og:description",
+            content: "Trouvez toutes les réponses à vos questions sur nos formations et services.",
+        },
+    ],
+})
+
 const openIndex = ref(null)
 
 const toggle = (index) => {

@@ -83,7 +83,28 @@
 import { ref } from "vue";
 import emailjs from "emailjs-com";
 
-// ...existing code...
+useHead({
+    title: "Contact",
+    meta: [
+        {
+            name: "description",
+            content: "Contactez Driv'Up pour vos questions sur les formations, les tarifs ou un devis personnalisé.",
+        },
+        {
+            name: "keywords",
+            content: "contact auto-école, devis permis, question formation, Strasbourg",
+        },
+        {
+            property: "og:title",
+            content: "Nous Contacter | Driv'Up",
+        },
+        {
+            property: "og:description",
+            content: "Une question ? Contactez notre équipe Driv'Up pour un accompagnement personnalisé.",
+        },
+    ],
+})
+
 const form = ref({
     nom: "",
     prenom: "",

@@ -53,6 +53,28 @@
     </div>
 </template>
 <script setup>
+useHead({
+    title: "Formations",
+    meta: [
+        {
+            name: "description",
+            content: "Découvrez nos formations permis B, code de la route et AAC. Formules adaptées à votre profil avec des prix transparents.",
+        },
+        {
+            name: "keywords",
+            content: "permis B, code de la route, AAC, formation conduite, forfait permis, auto-école",
+        },
+        {
+            property: "og:title",
+            content: "Nos Formations | Driv'Up",
+        },
+        {
+            property: "og:description",
+            content: "Pack Permis B, AAC, Code de la route - Formations adaptées à vos besoins chez Driv'Up.",
+        },
+    ],
+})
+
 const formations = [
     {
         title: "Code de la route",

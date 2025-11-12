@@ -372,7 +372,27 @@
 </template>
 
 <script setup>
-// Page informative - pas de logique complexe requise
+useHead({
+    title: "Mentions Légales & Politique de Confidentialité",
+    meta: [
+        {
+            name: "description",
+            content: "Mentions légales, politique de confidentialité et conditions d'utilisation de Driv'Up. Conformité RGPD et protection de vos données.",
+        },
+        {
+            name: "keywords",
+            content: "mentions légales, politique confidentialité, RGPD, conditions utilisation, protection données",
+        },
+        {
+            property: "og:title",
+            content: "Mentions Légales & Confidentialité | Driv'Up",
+        },
+        {
+            property: "og:description",
+            content: "Découvrez comment nous protégeons vos données personnelles conformément au RGPD.",
+        },
+    ],
+})
 </script>
 
 <style scoped>

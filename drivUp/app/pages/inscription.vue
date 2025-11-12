@@ -123,6 +123,28 @@
 <script setup>
 import { ref } from 'vue'
 
+useHead({
+    title: "Inscription",
+    meta: [
+        {
+            name: "description",
+            content: "Inscrivez-vous chez Driv'Up en quelques minutes. Remplissez notre formulaire pour commencer votre formation à la conduite.",
+        },
+        {
+            name: "keywords",
+            content: "inscription auto-école, formulaire inscription, permis conduite, Strasbourg",
+        },
+        {
+            property: "og:title",
+            content: "S'inscrire chez Driv'Up | Formation Permis",
+        },
+        {
+            property: "og:description",
+            content: "Rejoignez Driv'Up et commencez votre formation au permis de conduire dès aujourd'hui.",
+        },
+    ],
+})
+
 const form = ref({
     nom: '',
     prenom: '',
