@@ -111,7 +111,7 @@ const headerClasses = computed(() => {
       <button @click="mobileMenuOpen = !mobileMenuOpen" :aria-expanded="mobileMenuOpen" aria-controls="mobile-menu"
         class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg
                bg-white/90 shadow-sm border border-purple-100/30
-               focus:outline-none focus:ring-2 focus:ring-[#A779FF]/30">
+               focus:outline-none focus:ring-2 focus:ring-[#A779FF]/30" aria-label="Ouvrir le menu de navigation">
         <svg v-if="!mobileMenuOpen" width="22" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <rect x="3" y="6" width="18" height="2" rx="1" :fill="'#1F2937'"></rect>
           <rect x="3" y="11" width="18" height="2" rx="1" :fill="'#1F2937'"></rect>
