@@ -1,7 +1,7 @@
 <template>
     <div class="relative overflow-hidden bg-violet-lum">
         <!-- ====== Bannière FAQ ====== -->
-        <section class="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 text-center bg-violet-lum">
+        <section class="relative py-24 sm:py-24 md:py-32 px-4 sm:px-6 text-center bg-violet-lum">
             <div class="max-w-3xl mx-auto">
                 <h1
                     class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 sm:mb-6 md:mb-8 tracking-tight">
@@ -15,7 +15,7 @@
         </section>
 
         <!-- ====== Bloc FAQ (Accordéon) ====== -->
-        <section class="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-white to-green-light/40">
+        <section class="py-6 sm:py-8 md:py-10 px-4 sm:px-6 bg-gradient-to-b from-white to-green-light/40">
             <div class="max-w-3xl mx-auto">
                 <!-- Titre de section -->
                 <div class="mb-8 sm:mb-10 md:mb-12 text-center">
