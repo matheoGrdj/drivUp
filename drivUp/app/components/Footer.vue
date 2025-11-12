@@ -38,8 +38,17 @@
                         </NuxtLink>
                     </div>
                 </div>
-                <!-- Colonne 4 : Réseaux sociaux -->
+                <!-- Colonne 4 : Légal & Réseaux sociaux -->
                 <div>
+                    <h3 class="text-lg font-semibold text-metallic-purple mb-4">Légal & Social</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li>
+                            <NuxtLink to="/mentionslegales-confidentialites"
+                                class="text-gray-600 hover:text-metallic-purple transition-colors text-sm font-medium">
+                                Mentions légales & Confidentialité
+                            </NuxtLink>
+                        </li>
+                    </ul>
                     <h3 class="text-lg font-semibold text-metallic-purple mb-4">Suivez-nous</h3>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-600 hover:text-[#6B2EFF] transition-colors">

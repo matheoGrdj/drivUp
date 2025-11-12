@@ -24,7 +24,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
                 <!-- Formation -->
                 <div v-for="formation in formations" :key="formation.title"
-                    class="bg-white/80 backdrop-blur-sm border border-white/40 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out">
+                    class="bg-white/80 backdrop-blur-sm border border-white/40 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out flex flex-col">
                     <img :src="formation.img" :alt="formation.title"
                         class="rounded-xl mb-4 w-full object-cover h-48 group-hover:scale-105 transition-transform duration-300" />
                     <h3 class="text-2xl text-center font-semibold text-gray-900 mb-3">{{ formation.title }}</h3>
@@ -32,10 +32,10 @@
                         <li v-for="item in formation.points" :key="item">{{ item }}</li>
                     </ul>
                     <div class="text-lg font-bold text-gray-900 mb-4" v-html="formation.price"></div>
-                    <div class="space-y-2 text-center">
+                    <div class="space-y-2 text-center mt-auto">
                         <a v-if="formation.link" :href="formation.link" target="_blank"
                             class="inline-block text-purple-700 font-medium hover:text-purple-900 underline">
-                            Session d’entraînement gratuite
+                            Session d'entraînement gratuite
                         </a>
                         <NuxtLink to="/contact"
                             class="block bg-gradient-to-r from-purple-600 to-purple-400 text-white rounded-xl py-3 px-6 font-semibold hover:from-purple-700 hover:to-purple-500 transition-all shadow-lg hover:shadow-xl flex items-center justify-center">
