@@ -22,7 +22,7 @@
                     outils modernes pour avancer sereinement.</p>
                 <div class="flex items-center justify-center gap-4">
                     <NuxtLink to="/inscription" class="vl-cta-primary">Je m’inscris</NuxtLink>
-                    <NuxtLink to="/tarifs" class="vl-cta-secondary">Voir les tarifs</NuxtLink>
+                    <NuxtLink to="/formations" class="vl-cta-secondary">Voir les formations</NuxtLink>
                 </div>
             </div>
         </section>

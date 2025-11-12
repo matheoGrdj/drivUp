@@ -66,8 +66,8 @@
 const links = [
     { href: '/', label: 'Accueil' },
     { href: '/formations', label: 'Formations' },
-    { href: '/tarifs', label: 'Tarifs' },
     { href: '/temoignages', label: 'Témoignages' },
+    { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact' }
 ]
 
