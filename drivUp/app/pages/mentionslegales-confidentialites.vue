@@ -32,7 +32,7 @@
                                 class="bg-purple-50/50 border-l-4 border-metallic-purple p-4 rounded space-y-2 text-gray-700">
                                 <p><strong>Nom commercial :</strong> Driv'Up</p>
                                 <p><strong>Statut juridique :</strong> Auto-école agréée</p>
-                                <p><strong>Siret :</strong> À compléter selon votre enregistrement</p>
+                                <p><strong>Siret :</strong> 98900955000017</p>
                                 <p><strong>Siège social :</strong> 104 rue de Hochfelden, 67200 Strasbourg, France</p>
                                 <p><strong>Téléphone :</strong> 07 56 86 49 91</p>
                                 <p><strong>Email :</strong> contact@drivup-ae.com</p>
@@ -65,8 +65,7 @@
                             <p class="text-gray-700 mb-3">Driv'Up est une auto-école agréée par la Préfecture du
                                 Bas-Rhin, conforme à la réglementation française en matière de formation à la conduite.
                             </p>
-                            <p class="text-sm text-gray-600"><strong>Numéro d'agrément :</strong> À compléter selon
-                                votre préfecture</p>
+                            <p class="text-sm text-gray-600"><strong>Numéro d'agrément :</strong> E2506700060</p>
                         </div>
 
                         <!-- Propriété intellectuelle -->
